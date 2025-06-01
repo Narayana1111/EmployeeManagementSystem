@@ -9,7 +9,6 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface EmployeeMapper {
     EmployeeDto employeeToEmployeeDTO(Employee employee);
-    @Mapping(target = "id", ignore=true)
     Employee employeeDtoToEmployee(EmployeeDto employeeDto);
     List<EmployeeDto> employeesToEmployeeDTOS(List<Employee> employees);
 }
